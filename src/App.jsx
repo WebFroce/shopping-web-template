@@ -25,7 +25,7 @@ function App() {
     element: <ContactUs/>
   },
     {
-      path: `Gallery/:id`,
+      path: `Gallery/:slug`,
       element:<ProudPage/>
     }
 
