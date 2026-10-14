@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "IRANSansX";
+  src: url("./assets/woff2/IRANSansX-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansX";
+  src: url("./assets/woff2/IRANSansX-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansX";
+  src: url("./assets/woff2/IRANSansX-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansX";
+  src: url("./assets/woff2/IRANSansX-Black.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #17211b;
+  --color-secondary: #dce8df;
+  --color-accent: #d97745;
+  --color-background: #f4f5f0;
+  --color-surface: #ffffff;
+  --color-text: #17211b;
+  --color-muted: #6c746e;
+  --font-family: IRANSansX, Tahoma, Arial, sans-serif;
+  --radius: 22px;
+  --container-width: 1320px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: white;
+  background: var(--color-accent);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-kicker {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.section-subtitle {
+  max-width: 680px;
+  margin: 0.8rem auto 0;
+  color: var(--color-muted);
+  line-height: 1.9;
+}
+
+.form-control,
+.form-select {
+  border-color: color-mix(in srgb, var(--color-text) 13%, transparent);
+  border-radius: 14px;
+  background-color: var(--color-surface);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+.bg-white {
+  background-color: var(--color-surface) !important;
+}
+
+.text-secondary,
+.text-muted {
+  color: var(--color-muted) !important;
+}

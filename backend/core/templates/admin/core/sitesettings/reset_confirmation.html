@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">خانه</a>
+    &rsaquo;
+    <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+    &rsaquo;
+    <a href="{{ change_url }}">{{ original }}</a>
+    &rsaquo; بازگردانی تنظیمات
+  </div>
+{% endblock %}
+
+{% block content %}
+  <h1>بازگردانی تنظیمات سایت به حالت پیش‌فرض</h1>
+  <p>
+    با ادامه این عملیات، نام سایت، زبان، رنگ‌ها، فونت، تصاویر، محتوای صفحه اصلی
+    و اطلاعات فوتر به مقادیر اولیه برمی‌گردند. آیتم‌های منوی ناوبری تغییر نمی‌کنند.
+  </p>
+  <p><strong>این عملیات قابل بازگشت خودکار نیست.</strong></p>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="submit-row">
+      <input type="submit" value="بله، تنظیمات بازگردانی شود" class="deletelink">
+      <a href="{{ change_url }}" class="button cancel-link">انصراف</a>
+    </div>
+  </form>
+{% endblock %}

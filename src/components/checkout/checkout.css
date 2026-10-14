@@ -1,0 +1,36 @@
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.checkout-summary {
+  position: sticky;
+  top: 1rem;
+}
+
+.checkout-success {
+  max-width: 620px;
+}
+
+.success-mark {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: white;
+  background: #198754;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+}
